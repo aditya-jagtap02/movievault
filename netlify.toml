@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/tmdb-api/*"
+  to = "https://api.themoviedb.org/3/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/tmdb-img/*"
+  to = "https://image.tmdb.org/t/p/:splat"
+  status = 200
+  force = true
