@@ -18,11 +18,14 @@ function Movies({addToWatchList, removeFromWatchList, watchlist}) {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=68912da212615bf9fe7b081bf7bf6856&include_adult=false&include_video=false&language=en-US&page=${pageNo}&sort_by=popularity.desc`,
+        `/tmdb-api/discover/movie?api_key=68912da212615bf9fe7b081bf7bf6856&include_adult=false&include_video=false&language=en-US&page=${pageNo}&sort_by=popularity.desc`,
       )
       .then(function (res) {
         console.log(res.data.results);
         setMovies(res.data.results);
+      })
+      .catch(function (error) {
+        console.error("Error fetching movies via proxy:", error);
       });
   }, [pageNo]);
   return (
