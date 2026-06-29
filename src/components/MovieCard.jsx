@@ -21,7 +21,7 @@ function MovieCard({
     <div
       className="h-[50vh] w-[200px] bg-cover bg-center rounded-xl hover:cursor-pointer hover:scale-110 duration-300 flex items-end flex-col justify-between"
       style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/w500${poster_path})`,
+        backgroundImage: `url(/tmdb-img/w500${poster_path})`,
       }}
     >
       {doesContain(movieObj) ? (
